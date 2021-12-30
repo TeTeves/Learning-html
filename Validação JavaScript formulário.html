@@ -1,0 +1,49 @@
+<html>
+
+	<head>
+		<TITLE>Titulo 01</TITLE>
+         <script type="text/javascript">
+         function validar(){
+			var nome = formAcesso.nome.value
+		    var senha = formAcesso.senha.value
+			if (nome ==""){
+			    alert("Nome não informado. Digite o nome para ter acesso.");
+				formAcesso.nome.focus();
+				return false;	
+			}
+			if (senha ==""){
+			alert("Senha não informada. Digite a senha para ter acesso.");
+			formAcesso.senha.focus();
+			return false;
+			}
+			 if (senha != 123) {
+    alert("Senha inválida. A senha deve ser 123");
+    return false;
+  } else {
+    alert("Acesso autorizado.");
+
+			}
+			}
+			</script>
+				
+			
+	</head>
+	<body >
+		<form method="POST" name="formAcesso">
+			<fieldset>
+				<legend> Informe os dados de login </legend>
+					<label for="name">Nome:</label>
+					<input type="text" id="name" name="nome" maxlength=40/><label id="msgNome"></label>
+					</p>
+					<label for="senha">Senha:</label>
+					<input type="password" id="senha" name="senha" size="15" maxlength=8/><label id="msgSenha"></label>
+					</p>
+					<input type="submit" value="Entrar" onclick=" return validar(nome,senha)"/>
+					</p>
+					</p>
+					<label id="msgAcesso"></label>
+			</fieldset>
+		</form>
+	</body>
+
+</html>

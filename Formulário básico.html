@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<h2>Preencha o formulário abaixo</h2>
+<form>
+<html>
+<head>
+<link href="estiloForm.css" rel="stylesheet" >
+</head>
+    <body>
+        <form action="processa.php" method="post">
+            <p>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                      <label for="nome">Nome:</label> 
+        <input type="text" required="required" name="text" pattern="[A-z\s]+$" maxlength="40" id="nome" /> <label for="Sobrenome">Sobrenome:</label>
+   <input type="text" required="required" name="text" pattern="[A-z\s]+$" maxlength="40" id="Sobrenome" />
+   <p>     
+    <label for="Nascimento">Nascimento:</label>
+   <input type="date" required="required" name="date" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="1850-01-01" max="2017-12-31" id="Nascimento"/>
+ </p>
+  <p>
+     <label for="RG">RG:</label>
+   <input type="text" required="required" name="numbers" pattern="[0-9]+$" maxlength="12" id="RG"/>
+     </p>
+  <p>
+      <label for="CPF">CPF:</label>
+     <input type="text" maxlength="14" required="required" name="numbers" pattern="[0-9]+$" id="CPF"/>
+  </p>
+        </fieldset>
+        <p>
+        <head>
+        <fieldset>
+        <link href="estiloForm.css" rel="stylesheet">
+        <legend>Dados de Endereço</legend>
+                      <label for="Rua">Rua:</label> 
+        <input type="text" required="required" name="text" pattern="[A-z\s]+$" id="Rua" /> 
+   <label for="Numero">Numero:</label>
+   <input type="text" required="required" name="numbers" pattern="[0-9]+$" id="Numero" />
+   <p>
+   <label for="Bairro">Bairro:</label>
+<input type="text" required="required" name="text" pattern="[A-z\s]+$" id="Bairro" />
+   <p>
+   <label for="Estado">Estado:</label>
+   <input list="Estado" />
+<datalist id="Estado">
+<option value="Acre">
+<option value="Alagoas">
+<option value="Amazonas">
+<option value="Amapá">
+<option value="Bahia">
+<option value="Ceará"> 
+<option value="Distrito Federal">
+<option value="Espírito Santo">
+<option value="Goiás">
+<option value="Maranhão">
+<option value="Mato Grosso">
+<option value="Mato Grosso do Sul">
+<option value="Minas Gerais">
+<option value="Pará">
+<option value="Paraíba">
+<option value="Paraná">
+<option value="Pernambuco">
+<option value="Piauí"> 
+<option value="Rio de Janeiro">
+<option value="Rio Grande do Norte">
+<option value="Rondônia">
+<option value="Rio Grande do Sul">
+<option value="Roraima">
+<option value="Santa Catarina">
+<option value="Sergipe">
+<option value="São Paulo">
+<option value="Tocantins">
+
+</datalist>
+<p>
+  <label for="Cidade">Cidade:</label> 
+<input type="text" required="required" name="text" pattern="[A-z\s]+$" id="Cidade"/>
+<p>
+<label for="CEP">CEP:</label>
+   <input type="text" required="required" name="numbers" pattern="[0-9]+$" maxlength="5" id="CEP"/> <h>-</h> <input type="text" required="required" name="numbers" pattern="[0-9]+$" maxlength="3" id="CEP"/>    
+   </fieldset>
+   <p>
+            <fieldset>
+                <legend>Dados de login</legend>
+                      <label for="email">E-mail:</label> 
+         <input type="email" id="email" required name=email/>
+         <p>
+          <label for="image">Imagem de perfil:</label> 
+        <input type="file" name="image" id="image" accept="image/*">
+        <p>
+         <label for="login">Login do usuário:</label> 
+        <input type="text" required="required" name="text" pattern="[A-z\s]+$" maxlength="40" id="login" />
+        <p>
+         <label for="password">Senha (minimo 8 dígitos):</label>
+         <input type="password" minlength="8" maxlength="12" required="required" name="password"/>
+         <p>
+         <label for="senha_confirma">Confirme sua senha:</label>
+        <input type="password" name="senha_confirma"  minlength="8" maxlength="12"required="required"  id="senha_confirma" />
+
+
+        </fieldset>
+   </head>
+   </p>
+<input type="reset" value="Limpar dados"> <br>
+<input type="submit">
+</form>        
+</body>
